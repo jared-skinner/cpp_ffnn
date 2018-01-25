@@ -37,7 +37,7 @@ import ycm_core
 flags = [
     '-std=c++11',
     '-fsyntax-only',
-    '-I/home/jared/ffnn/src/include',
+    '-I/home/jared/cpp_ffnn/src/include',
     '-DLINUX',
     '-DUNIX',
     '-D_REENTRANT',

@@ -1,21 +1,28 @@
 #include "node.hpp"
 
-#include <string>
 
-using namespace std;
 
-class Node
+
+Node::Node(string name, arithmetic_fn * foward, arithmetic_fn * backward)
 {
-	public:
-		string _name;
+	_name = name;
+
+	// foward computation
+	_foward = foward;
+
+	// backkward computation
+	_backward = backward;
+}
+
+Node::Node(string name)
+{
+	_name = name;
+
+	// foward computation
+	_foward = &sigmoid;
+
+	// backkward computation
+	_backward = &sigmoid_prime;
+}
 
 
-		Node(string name)
-		 {
-			 _name = name;
-
-			 // foward computation
-
-			 // backkward computation
-		 }
-};

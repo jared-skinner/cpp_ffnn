@@ -1,5 +1,4 @@
-#include <math.h>
-
+#include "common.hpp"
 
 float sigmoid(float x);
 
