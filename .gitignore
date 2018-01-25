@@ -1,2 +1,3 @@
 /release/bin/ffnn
 /debug/bin/ffnn
+*.o
