@@ -14,7 +14,8 @@ public:
 	int _node_count;
 	list<Node> _nodes;
 
-	Layer (string name, int node_count);
+	Layer(string name, int node_count);
+	~Layer();
 };
 
 

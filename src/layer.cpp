@@ -21,3 +21,12 @@ Layer::Layer (string name, int node_count)
 		it++;
 	}
 }
+
+Layer::~Layer ()
+{
+
+
+}
+
+
+

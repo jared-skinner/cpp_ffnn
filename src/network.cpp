@@ -20,7 +20,7 @@ Network::Network(string name, int layer_count, int * node_count)
 	}
 
 	// allocate space for layers objects
-	_layers = (Layer *) calloc(sizeof(_layer_count), sizeof(Layer));
+	_layers = (Layer *) calloc(sizeof(_layer_count), 1);
 
 	// initialize each layer
 	for (i = 0; i < _layer_count; i++)
@@ -34,14 +34,32 @@ Network::Network(string name, int layer_count, int * node_count)
 
 Network::~Network()
 {
+	int i;
+
+	for (i = 0; i < _layer_count; i++)
+	{
+		_layers[i].~Layer();
+	}
+
 	free(_layers);
 }
 
 
-void Network::foward_pass()
+void Network::foward_pass(Matrix X)
 {
+	int i;
 
+	// row count of input matrix should match row count of first connectivity
+	// matrix
+	if (X._row_count != _node_count[0])
+		return; // TODO: throw an exception
 
+	for (i = 0; i < _layer_count; i++)
+	{
+		//X = X * _layers[i]
+
+		// apply activation function;
+	}
 }
 
 

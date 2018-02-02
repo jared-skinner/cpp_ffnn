@@ -9,9 +9,11 @@ class Matrix
 {
 	public:
 		double ** _values;
+		int _row_count;
+		int _column_count;
 
 		Matrix();
-		Matrix(int rows, int columns);
+		Matrix(int _row_count, int _column_count);
 
 		// TODO
 		//Matrix operator+();
