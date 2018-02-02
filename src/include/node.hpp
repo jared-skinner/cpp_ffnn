@@ -10,13 +10,13 @@ typedef float (arithmetic_fn) (float x);
 
 class Node
 {
-public:
-	string _name;
-	arithmetic_fn * _foward;
-	arithmetic_fn * _backward;
+	public:
+		string _name;
+		arithmetic_fn * _foward;
+		arithmetic_fn * _backward;
 
-	Node(string name, arithmetic_fn * foward, arithmetic_fn * backward);
-	Node(string name);
+		Node(string name, arithmetic_fn * foward, arithmetic_fn * backward);
+		Node(string name);
 };
 
 

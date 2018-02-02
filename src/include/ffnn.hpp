@@ -2,7 +2,6 @@
 #define __FFNN_H__
 
 #include "common.hpp"
-#include "graph.hpp"
 #include "compuatation.hpp"
 
 

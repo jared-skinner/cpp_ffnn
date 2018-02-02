@@ -8,13 +8,13 @@ INCDIR=-I./include
 
 CPPFLAGS = -Wall $(INCDIR)
 
-
 OBJECTS = ffnn.o \
 		  node.o \
-		  graph.o \
 		  computation.o \
 		  layer.o \
 		  connections.o \
+		  network.o \
+		  matrix.o \
 
 # put debug as all since this is what will be compiling most of the time
 all:     $(DEBUG_TARGET)
